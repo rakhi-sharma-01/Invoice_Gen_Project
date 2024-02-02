@@ -1,0 +1,4 @@
+.large-con{
+    display:flex;
+    flex-direction: row;
+}
