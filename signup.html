@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <span class="bg-animate"></span>
+
+        <div class="info-text signup">
+            <h2>Welcome Guest</h2>
+    
+        </div>
+
+        <div class="form-box signup">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-box">
+                    <input type="text" id="User-Name" name = "uname" placeholder=""required>
+                    <label>Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="User-Email" name="uemail" placeholder="" required>
+                    <label>Email</label>
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="User-Pass" name="upass" placeholder="" required>
+                    <label>Password</label>
+                    <i class='bx bxs-lock-alt' id="toggle-pass"></i>
+                </div>
+                <button type="submit" class="btn" id="sign_up" onclick="window.location.href='index.html'">Sign Up</button>
+
+                <div class="logreg-link">
+                    <p>Already have an account <a href="index.html" class="register-link">Log in</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

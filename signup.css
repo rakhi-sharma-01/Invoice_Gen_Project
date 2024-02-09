@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background:#081b29;
+}
+.wrapper{
+    position:relative;
+    height:450px;
+    width:750px;
+    border:2px solid #0ef;
+    overflow: hidden;
+    box-shadow: 0 0 15px #0ef;
+    background: transparent;
+}
+.wrapper .form-box{
+    position:absolute;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    right:0;
+    padding:0 40px 0 60px;
+    color: #fff;
+    height:100%;
+    width:60%;
+}
+.wrapper .info-text{
+    position:absolute;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    left:0;
+    height:100%;
+    width:40%;
+    color:#fff;
+}
+.info-text h2{
+    color:#fff;
+    font-size:32px;
+    text-align: center;
+}
+.input-box{
+    width:100%;
+    height: 50px;
+    position: relative;
+    margin:25px 0;
+}
+.input-box input{
+    border:none;
+    position:relative;
+    height:100%;
+    width:100%;
+    color:white;
+    font-size: 16px;
+    outline:none;
+    background: transparent;
+    transition:0.5s;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+    font-weight: 500;
+    
+}
+.input-box input:focus,
+.input-box input:valid{
+    border-bottom-color: #0ef;
+}
+.input-box label{
+    position:absolute;
+    color:#fff;
+    left:0;
+    top:8%;
+    font-size:15px;
+    transition:0.5s;
+    transform:translateY(-50%);
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top:-5px;
+    color:#0ef;
+}
+.input-box i{
+    position:absolute;
+    color:#fff;
+    transition:0.5s;
+    right:0;
+    top: 50%;
+    font-size:15px;
+    transform:translateY(-50%);
+}
+.input-box input:focus~i,
+.input-box input:valid~i {
+    color:#0ef;
+}
+.btn{
+    position:relative;
+    width:100%;
+    height:45px;
+    border-radius:40px;
+    color:white;
+    background-color:rgb(72, 198, 207);
+    cursor: pointer;
+    box-shadow: 0 0 1px #0ef;
+}
+/* .bg-animate{
+    display:none;
+    background-color:#0ef;
+
+} */
+.register-link{
+    color:#0ef;
+}
+
+.info-text p{
+    font-size:16px;
+    color:#fff;
+}
+.bg-animate {
+    position:absolute;
+    top:-4px;
+    right:0;
+    width:850px;
+    height:600px;
+    background: linear-gradient(45deg, #081b29,#0ef);
+    border-bottom: 3px solid #0ef;
+    transform: rotate(10deg) skewY(-137deg);
+    transform-origin: bottom left;
+    
+}
