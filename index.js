@@ -7,6 +7,7 @@ function checkUser(){
 
     if(newUser.value === name && newPass.value === pass){
         alert("You are logged in");
+        location.href="./Invoice_Gen/user.html"
     }else{
         alert("User doesn't exists");
     }
@@ -21,3 +22,10 @@ toggle_pass.addEventListener('click',function(e){
     u_pass.setAttribute('type',type);
     this.classList.taggle('bx bx-lock-open-alt');
 })
+ 
+const handleSubmit =(e)=>{
+    e.preventDefault();
+    checkUser();
+}
+const user_log = document.getElementById("user_log");
+user_log.addEventListener("click", handleSubmit);

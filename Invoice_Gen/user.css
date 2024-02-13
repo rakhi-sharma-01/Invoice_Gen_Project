@@ -96,3 +96,16 @@ body{
     background-color: green;
     color:#fff;
 }
+.button{
+    display: flex;
+    flex-direction:column;
+}
+.item-container {
+    margin-top: 20px;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}

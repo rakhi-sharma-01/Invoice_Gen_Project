@@ -1,12 +1,24 @@
-const userName = document.getElementById("User-Name");
-const userEmail = document.getElementById("User-Email");
-const userPass = document.getElementById("User-Pass");
+let userName = document.getElementById("User-Name");
+let userEmail = document.getElementById("User-Email");
+let userPass = document.getElementById("User-Pass");
 
 function storeUser(e){
-    localStorage.setItem("userName",userName.value);
-    localStorage.setItem("userEmail",userEmail.value);
-    localStorage.setItem("userPass",userPass.value);
+    // localStorage.setItem("userName",userName.value);
+    // localStorage.setItem("userEmail",userEmail.value);
+    // localStorage.setItem("userPass",userPass.value);
+    let formData = [];
+    let newForm = { 
+        userName: userName.value, 
+        userEmail: userEmail.value, 
+        userPass: userPass.value 
+    };
+    console.log("new ", newForm);
+    formData = [...formData, newForm];
+    console.log(formData);
+    localStorage.setItem("authData", JSON.stringify(formData));
+
 }
+
 
 const toggle_pass =document.querySelector("#toggle-pass");
 const u_pass = document.querySelector("#User-Pass");
