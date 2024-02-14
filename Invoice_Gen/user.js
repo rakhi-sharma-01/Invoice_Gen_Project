@@ -99,12 +99,11 @@ function storeFormData(event) {
                 },
                 items: itemList
             };
-console.log("x",formData.user);
-console.log("y",formData.items,itemList);
-console.log(formData);
+
             let formDataJson = JSON.stringify(formData);
 
             localStorage.setItem("formData", formDataJson);
             window.location.href = 'http://127.0.0.1:5500/your_bills/bill.html';
-
+         console.log("hi",formData);
+         console.log("hi1",user);
         };

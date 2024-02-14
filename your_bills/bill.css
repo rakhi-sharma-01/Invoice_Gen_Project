@@ -8,13 +8,13 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
-    min-height:50vh;
+    height: 100%;
     background:#081b29;
 }
 .cont{
     display:flex;
     flex-direction:column;
-    width:80%;
+    width:100%;
     margin:20px;
     background: #fff;
     align-items: center;
@@ -37,12 +37,14 @@ body{
     padding:20px;
     text-align: center;
     margin:0;
+    height: 100%;
 }
 .para{
     background-color: rgb(22, 60, 135);
     color:white;
     margin-top:20px;
     width:100%;
+    height: 100% ;
 }
 .para p{
     justify-content: center;
@@ -55,22 +57,29 @@ body{
     width:100%;
     padding-left: 50px;
     margin:30px;
+    
 }
 .button1{
     margin: 10px;
     margin-top: 0;
     background:green;
     color:#fff;
+    padding:5px;
+    margin: 10px;
 }.button2{
     margin: 10px;
     margin-top: 0;
     background:blue;
     color:#fff;
+    padding:5px;
+    margin: 10px;
 }.button3{
     margin: 10px;
     margin-top: 0;
     background:red;
     color:#fff;
+    padding:5px;
+    margin: 10px;
 
 }
 .table-bordered tr th{

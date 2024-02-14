@@ -1,6 +1,9 @@
 function checkUser(){
-    var name = localStorage.getItem("userName");
-    var pass = localStorage.getItem("userPass");
+    var name = localStorage.getItem("authData.userName");
+    var pass = localStorage.getItem("authData.userPass");
+
+    console.log("x",name);
+    console.log("y",pass);
 
     var newUser = document.getElementById("Uname");
     var newPass = document.getElementById("Upass");
