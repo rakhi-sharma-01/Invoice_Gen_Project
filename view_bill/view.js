@@ -9,12 +9,10 @@ document.addEventListener('DOMContentLoaded',function(){
         }else{
             console.log("No formData found in local storage");
         }
-        console.log("hi");
     
 })
 
 function populateViewBill(formData){
-console.log("hi2");
     document.querySelector('.top .bill-details table').innerHTML=`
              <tr>
                 <td>${formData.user.billTitle}</td>
@@ -28,7 +26,8 @@ console.log("hi2");
                 <td>${formData.user.address}</td>
                 <td>${formData.user.mobileNo}</td>
              </tr>`;
-console.log("hi3");
+
+let total = 0;
 
     formData.items.forEach(item => {
         document.querySelector('.middle .table_item').innerHTML += `
@@ -39,5 +38,12 @@ console.log("hi3");
                         <td>${item.total}</td>
                     </tr>
                 `;
+                total += parseFloat(item.total || 0);
             });
+            document.querySelector('.middle .table_item').innerHTML += `
+        <tr>
+            <td colspan="3" class="total-label"><b>Bill Total<b></td>
+            <td><b>${total.toFixed(2)}<b></td>
+        </tr>
+    `;
 }         

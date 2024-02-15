@@ -103,17 +103,32 @@ body{
     position:relative;
     width:100%;
     height:45px;
-    border-radius:40px;
-    color:white;
-    background-color:rgb(72, 198, 207);
-    cursor: pointer;
-    box-shadow: 0 0 1px #0ef;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline:none;
+    border-radius: 40px;
+    cursor:pointer;
+    font-size:16px;
+    color:#fff;
+    font-weight: 600;
+    overflow:hidden;
+    z-index:1;
+    transition:0.5s;
 }
-/* .bg-animate{
-    display:none;
-    background-color:#0ef;
-
-} */
+.btn::before { 
+    content: '';
+    position:absolute;
+    top:-100%;
+    left:0;
+    width:100%;
+    height:200%;
+    z-index: -1;
+    background: linear-gradient(#081b29, #0ef, #081b29);
+    transition:0.5s;
+}
+.btn:hover::before{
+    top:0;
+}
 .register-link{
     color:#0ef;
 }

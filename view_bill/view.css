@@ -30,7 +30,7 @@ body{
 .top{
     display:flex;
     flex-direction:column;
-    padding:20px;
+    padding:5px;
 
 }
 .top h3 {
@@ -41,15 +41,15 @@ body{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding:20px;
-    margin:20px;
+    padding:10px;
+    margin:10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
 }
 .top .user-details {
     width:80%;
-    padding:20px;
-    margin:20px;
+    padding:10px;
+    margin:10px;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -57,13 +57,13 @@ body{
 
 }
 .middle{
-    padding:20px;
+    padding:10px;
     margin:20px;
     width:80%;
     justify-content: center;
     display: flex;
     flex-direction: column;
-
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .table_item {

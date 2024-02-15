@@ -21,15 +21,15 @@
                         <div class="user_details_1">
                             <div class="u_input">
                                 <label for="bill-title">Bill Title:</label>
-                                <input type="text" id="title"  name="billtitle" onkeyup="gettingData()">
+                                <input type="text" id="title"  name="billtitle" onkeyup="gettingData()" required>
                             </div>
                             <div class="u_input">
                                 <label for="bill-No">Bill No:</label>
-                                <input type="text" id="bill_no" name="billno" onkeyup="gettingData()" maxlength="4">
+                                <input type="text" id="bill_no" name="billno" onkeyup="gettingData()" maxlength="4" required>
                             </div>
                             <div class="u_input">
                                 <label for="">Date:</label>
-                                <input type="date" id="date" name="datetime" onkeyup="gettingData()">
+                                <input type="date" id="date" name="datetime" onkeyup="gettingData()" required>
                             </div>
                         </div>
                         <div class="user_details_2">
@@ -70,7 +70,6 @@
                     </div> 
                     <div class="button">
                         <div class="cont_4">
-                            <!-- <button class="btn" onclick="listFunction()"><i class="bx bx-plus-circle"></i>Item</button> -->
                             <input class="btn" type="submit" value="+ item" onclick="listFunction(event)">
                         </div>
                         <div class="item-container" id="itemContainer">
@@ -80,9 +79,7 @@
                             <button id="form" class="sub" onclick="storeFormData(event)">Submit</button>
                         </div>
                      
-                        <!-- <div class="submit">
-                           <button  id="form" class="sub" onclick="storeFormData(event)">Submit</button>
-                        </div>  -->
+                       
                     </div>
                 </form>
             </div>

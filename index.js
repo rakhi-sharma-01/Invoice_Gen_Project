@@ -1,10 +1,15 @@
 function checkUser(){
-    var name = localStorage.getItem("authData.userName");
-    var pass = localStorage.getItem("authData.userPass");
+   
+    var authDataString = localStorage.getItem("authData");
 
-    console.log("x",name);
-    console.log("y",pass);
+    if(authDataString){
+        var authData = JSON.parse(authDataString);
+        var user = authData[0];
+        
+        var name = user.userName;
+        var pass = user.userPass;
 
+        
     var newUser = document.getElementById("Uname");
     var newPass = document.getElementById("Upass");
 
@@ -14,7 +19,9 @@ function checkUser(){
     }else{
         alert("User doesn't exists");
     }
-
+    }else{
+        alert("No user Data Found!")
+    }
 }
 
 const toggle_pass =document.querySelector("#toggle-pass");
@@ -23,7 +30,7 @@ const u_pass = document.querySelector("#Upass");
 toggle_pass.addEventListener('click',function(e){
     const type = u_pass.getAttribute('type')==='password'? 'text' :'password';
     u_pass.setAttribute('type',type);
-    this.classList.taggle('bx bx-lock-open-alt');
+    this.classList.toggle('bx bx-lock-open-alt');
 })
  
 const handleSubmit =(e)=>{

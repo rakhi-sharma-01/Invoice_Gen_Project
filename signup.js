@@ -3,9 +3,7 @@ let userEmail = document.getElementById("User-Email");
 let userPass = document.getElementById("User-Pass");
 
 function storeUser(e){
-    // localStorage.setItem("userName",userName.value);
-    // localStorage.setItem("userEmail",userEmail.value);
-    // localStorage.setItem("userPass",userPass.value);
+    
     let formData = [];
     let newForm = { 
         userName: userName.value, 

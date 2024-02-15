@@ -36,21 +36,17 @@ let price = document.getElementById("i_price").value;
 
 if(quantity && price){
     let total = quantity * price ;
-console.log("x",total);
 document.getElementById("t_price").value = total;
 
 let item = {itemName:itemName ,quantity:quantity,price:price ,total:total}
 itemList.push(item);
 
-console.log("Item:", item);
 
 }
 }
-
 function listFunction(event) {
-    console.log('hi')
-    if(event){
-    event.preventDefault();
+    if (event) {
+        event.preventDefault();
     }
 
     let itemName = document.getElementById("item").value;
@@ -58,28 +54,41 @@ function listFunction(event) {
     let price = document.getElementById("i_price").value;
     let total = document.getElementById("t_price").value;
 
+    if (!itemName || !quantity || !price || !total) {
+        alert("Please fill in all item details");
+        return;
+    }
+
+    let newRow = document.createElement("div");
+    newRow.classList.add("item");
+    newRow.textContent = `${quantity} ${itemName} X ${price} Total: ${total}`;
+
+    let itemContainer = document.getElementById("itemContainer");
+    itemContainer.appendChild(newRow);
+
+    document.getElementById("item").value = "";
+    document.getElementById("i_quant").value = "";
+    document.getElementById("i_price").value = "";
+    document.getElementById("t_price").value = "";
+
     let item = {
         name: itemName,
         quantity: quantity,
         price: price,
         total: total
     };
-    console.log("hi2")
     itemsArray.push(item);
-    console.log("Item List:", itemsArray);
-
-    appendItemToContainer(item);
 }
 
+
+
 function appendItemToContainer(item) {
-    console.log("hi3",item)
     let newItem = document.createElement("div");
     newItem.classList.add("item");
 
     newItem.textContent = ` ${item.quantity} ${item.name}  X  ${item.price}   Total: ${item.total}`;
 
     let itemContainer = document.getElementById("itemContainer");
-    console.log(item)
     itemContainer.appendChild(newItem);
 }
 
@@ -104,6 +113,5 @@ function storeFormData(event) {
 
             localStorage.setItem("formData", formDataJson);
             window.location.href = 'http://127.0.0.1:5500/your_bills/bill.html';
-         console.log("hi",formData);
-         console.log("hi1",user);
+         
         };

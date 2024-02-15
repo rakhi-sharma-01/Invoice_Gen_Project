@@ -62,17 +62,3 @@ function onDeleteButtonClick(){
 }
 
 
-// let storedData = localStorage.getItem("formData");
-// console.log("Stored User Data:", storedData);
-
-// if (storedData) {
-//     try {
-//         return JSON.parse(storedData);
-//     } catch (error) {
-//         console.error("Error parsing user data:", error);
-//         return {};
-//     }
-// } else {
-//     console.warn("User data not found in local storage.");
-//     return {}; 
-// }
