@@ -1,3 +1,22 @@
+const checkAuthentication = () => {
+    const storedIsLoggedIn = sessionStorage.getItem("isLoggedIn");
+    if (!storedIsLoggedIn || storedIsLoggedIn !== "true") {
+        window.location.href = 'index.html';
+        isLoggedIn = false; 
+        return false;
+    }
+    isLoggedIn = true;
+    return true;
+}
+
+const protectRoute = () => {
+    if (!checkAuthentication()) {
+        alert("Unauthorized access, Redirecting to login page");
+        window.location.href = 'http://127.0.0.1:5500/index.html';
+    }
+};
+
+protectRoute();
 
 let gettingData = () => {
     let billTitle = document.getElementById("title").value;
