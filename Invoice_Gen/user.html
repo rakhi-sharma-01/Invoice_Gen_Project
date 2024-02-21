@@ -4,53 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice Generator</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+
 </head>
 <body>
-    <div>
+    <div class="main_container">
         <div class="heading">
             <h2>Billing System Application</h2>
         </div>
         <div class="large-con">
             <div class="cont_1">
-                
-                    <form action="">
-                        <div class="cont_3">
-                            <label for="item-name">Item Name:</label>
-                            <input type="text" id="item_name">
+                <form onsubmit="return false;">
+                    <div class="user_details">
+                        <div class="user_details_1">
+                            <div class="u_input">
+                                <label for="bill-title">Bill Title:</label>
+                                <input type="text" id="title"  name="billtitle" onkeyup="gettingData()" required>
+                            </div>
+                            <div class="u_input">
+                                <label for="bill-No">Bill No:</label>
+                                <input type="text" id="bill_no" name="billno" onkeyup="gettingData()" maxlength="4" required>
+                            </div>
+                            <div class="u_input">
+                                <label for="">Date:</label>
+                                <input type="date" id="date" name="datetime" onkeyup="gettingData()" required>
+                            </div>
                         </div>
-                        <br><br>
-
+                        <div class="user_details_2">
+                            <div class="u_input">
+                                <label for="name">Name:</label>
+                                <input type="text" id="u_name" onkeyup="gettingData()" name="name" required>
+                            </div>
+                            <div class="u_input">
+                                <label for="address">Address:</label>
+                                <input type="text" id="U_address" name="address" onkeyup="gettingData()" required>
+                            </div>
+                            <div class="u_input">
+                                <label for="mobile-no">Mobile No:</label>
+                                <input type="tel" id="u_mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" onkeyup="gettingData()" required>
+                            </div>    
+                        </div>
+                    </div>   
+                    <div class="cart_details">
+                            
+                        <div class="cart_input">
+                            <label for="item">Item:</label>
+                            <input type="text" id="item" name="item-name" required>
+                        </div>
+                        
+                        <div class="cart_input">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="i_quant" min="1" name="item-quantity" onchange="calculate()" required>
+                        </div>
+                        
+                        <div class="cart_input">
+                            <label for="price">Price:</label>
+                            <input type="number" id="i_price" min="0" name="item-price" onchange="calculate()" required>
+                        </div>
+                        <div class="cart_input">
+                            <label for="total">Total Price:</label>
+                            <input type="number" id="t_price" name="total-price" readonly>
+                        </div>
+                    </div> 
+                    <div class="button">
                         <div class="cont_4">
-                            <label for="item-price">Item Price:</label>
-                            <input type="text" id="item_price">
+                            <input class="btn" type="submit" value="+ item" onclick="listFunction(event)">
                         </div>
-                        <br>
-                        <button type="submit" class="btn-btn-primary" id="submit_1">Add to Cart</button>
-
-                    <br><br>
-                    </form>
-            </div>
-            <div class="cont_2">
-                <h1>check flex</h1>
-                <table class="table" id="cart_table">
-                    <thead>
-                        <tr>
-                            <td>Item Name</td>
-                            <td>Item Price</td>
-                            <td>Action</td>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-
-                <p id="total_cost">Total Cost: </p>
-                <br>
-
-                <button class="btn-btn-sucess">Generate Invoice</button>
-
+                        <div class="item-container" id="itemContainer">
+                            
+                        </div>
+                        <div class="submit">
+                            <button id="form" class="sub" onclick="storeFormData(event)">Submit</button>
+                        </div>
+                     
+                       
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
+
+<script src="./user.js"></script>
 </body>
 </html>
